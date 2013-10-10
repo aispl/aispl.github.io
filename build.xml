@@ -1,0 +1,32 @@
+<project name="javadoc" default="generate" basedir=".">
+
+  <target name="generate">
+    <delete dir="javadoc-all"/>
+    <javadoc destdir="javadoc-all" windowtitle="AIS - Commons">
+
+      <packageset dir="ais-commons-bean/src/main/java"/>
+
+      <group title="Beans and Validation" packages="pl.ais.commons.bean.*"/>
+      <group title="Application"          packages="pl.ais.commons.application.*"/>
+      <group title="Domain"               packages="pl.ais.commons.domain.*"/>
+      <group title="Infrastructure"       packages="pl.ais.commons.infrastructure.*"/>
+      <group title="Query"                packages="pl.ais.commons.query:pl.ais.commons.query.*"/>
+
+      <packageset dir="ais-commons-domain/src/main/java"/>
+      <packageset dir="ais-commons-domain-us/src/main/java"/>
+      <packageset dir="ais-commons-infrastructure/src/main/java"/>
+      <packageset dir="ais-commons-query/src/main/java"/>
+      <packageset dir="ais-commons-application/src/main/java"/>
+
+      <link href="http://docs.oracle.com/javase/7/docs/api/"/>
+      <link href="http://docs.spring.io/spring/docs/3.2.x/javadoc-api/"/>
+      <link href="http://www.querydsl.com/static/querydsl/latest/apidocs/"/>
+      <link href="http://joda-time.sourceforge.net/apidocs/"/>
+      <link href="http://jsr-305.googlecode.com/svn/trunk/javadoc/"/>
+      <link href="http://cglib.sourceforge.net/apidocs/"/>
+
+    </javadoc>
+  </target>
+
+</project>
+
